@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../common/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../common/common.min.css" />
+    <link rel="stylesheet" href="../common/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="mainPage.css">
+    <script src="../common/jquery-1.11.3.min.js"></script>
+    <script src="../common/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../localDB/indexDB.js"></script>
+    <script src="mainPage.js"></script>
+    <title>mainPage</title>
+</head>
+
+<body>
+    <div data-role="page" data-theme="a">
+        <div data-role="header">
+            <h1>LocalEnglish</h1>
+            <a href="#about" data-rel="popup" class="ui-btn ui-corner-all ui-nodisc-icon ui-icon-info ui-btn-icon-notext ui-btn-right"
+                data-position-to="window">help</a>
+        </div>
+        <div data-role="popup" id="about">
+            <div data-role="header">
+                <h2>关于软件</h2>
+            </div>
+
+            <div class="ui-content">
+                <h1>软件说明</h1>
+                <h3>HOME:</h3>
+                <p>
+                    随机选择已经存储的十个单词，可以分别查看汉译和英译。
+                    <br>如果存储的单词不足十个，则显示开发者选的十个单词，但此时按钮无效。
+                </p>
+                <h3>WORDS:</h3>
+                <p>
+                    显示所有添加的单词。
+                    <br>单击显示单词注释，长按进入编辑，点击删除图标则删除单词。
+                    <br>点击右上角“+”图标添加新单词
+                </p>
+                <p>
+                    PS：本软件为本地应用
+                </p>
+                <br>
+                <a href="#" class="ui-btn ui-corner-all ui-shadowui-btn-b ui-icon-back ui-btn-icon-left"
+                    data-rel="back">返回</a>
+            </div>
+
+            <div data-role="footer">
+                <h1>&copy;windwave</h1>
+            </div>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li class="rand-li">
+                    <h3 class="rand-word">alienate</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+                <li class="rand-li">
+                    <h3 class="rand-word">herald</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+                <li class="rand-li">
+                    <h3 class="rand-word">handicap</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+                <li class="rand-li">
+                    <h3 class="rand-word">propulsion</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+                <li class="rand-li">
+                    <h3 class="rand-word">comrade</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+                <li class="rand-li">
+                    <h3 class="rand-word">voucher</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+                <li class="rand-li">
+                    <h3 class="rand-word">picturesque</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+                <li class="rand-li">
+                    <h3 class="rand-word">integral</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+                <li class="rand-li">
+                    <h3 class="rand-word">sprout</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+                <li class="rand-li">
+                    <h3 class="rand-word">ventilate</h3>
+                    <a data-role="button" class="rand-btn">Chinese</a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="../AllPage/AllPage.html" rel="external" data-prefetch="true">Words</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

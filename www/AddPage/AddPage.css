@@ -1,0 +1,19 @@
+fieldset[class^="group-form-"]{
+    margin: .7rem 0 !important;
+    padding-top: .5rem !important;
+    border-top: 1px solid rgb(187, 187, 187) !important;
+}
+.ui-icon-plus{
+    float: left !important;
+    margin: 0 0.5rem 0 0 !important;
+}
+.add-block{
+    position: relative;
+    overflow: hidden;
+}
+.add-block span{
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}

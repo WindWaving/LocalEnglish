@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../common/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="AllPage.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1539829_9fnve3walyu.css">
+    <script src="../common/jquery-1.11.3.min.js"></script>
+    <script src="../common/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../localDB/indexDB.js"></script>
+    <script src="AllPage.js"></script>
+    <title>mainPage</title>
+</head>
+
+<body>
+    <div data-role="page" id="allpage">
+        <div data-role="header">
+            <h1>LocalEnglish</h1>
+            <a class="ui-btn-right" href="#confirm_dialog" data-rel="dialog">ClearAll</a>
+        </div>
+        <div data-role="content" class="content">
+            <ul data-role="listview" data-inset="true" data-autodividers="true" class="wordlist" data-filter="true">
+            </ul>
+        </div>
+        <div id="card" data-role="popup" data-position-to="window" class="ui-content">
+            <h2></h2>
+            <p class="meanings"></p>
+            <p class="sentences"></p>
+        </div>
+        <div class="add-btn">
+            <a href="../AddPage/AddPage.html" class="iconfont icon-icon--" rel="external"></a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="../mainPage/mainPage.html" rel="external" data-prefetch="true">Home</a></li>
+                    <li><a href="#">Words</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="confirm_dialog">
+        <div data-role="header">
+            <h1></h1>
+        </div>
+        <div data-role="content">
+            <p>确认要删除所有单词吗？</p>
+            <a onclick="clearAllWords();" data-role="button">确认</a>
+            <a data-role="button" data-rel="back">取消</a>
+
+        </div>
+        <div data-role="footer">
+            <h1></h1>
+        </div>
+    </div>
+</body>
+
+</html>

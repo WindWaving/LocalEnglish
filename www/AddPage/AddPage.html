@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../common/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../common/common.min.css" />
+    <link rel="stylesheet" href="../common/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="AddPage.css">
+    <script src="../common/jquery-1.11.3.min.js"></script>
+    <script src="../common/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../localDB/indexDB.js"></script>
+    <script src="../common/deviceboot.js"></script>
+    <script src="AddPage.js"></script>
+    <title>addPage</title>
+</head>
+
+<body>
+    <div data-role="page"  data-position="fixed">
+        <div data-role="header">
+            <a href="../AllPage/AllPage.html" class="ui-btn-icon-notext" data-icon="back" rel="external">BACK</a>
+            <h1>LocalEnglish</h1>
+        </div>
+        <div data-role="content">
+            <form>
+                <div class="ui-field-contain">
+                    <label for="word">单词:</label>
+                    <input type="text" id="word" name="word" placeholder="请填入单词" required>
+                    <label for="meaning">词意:</label>
+                    <textarea id="meaning" name="meaning" required></textarea>
+                    <div class="group-sentence">
+                        <label for="sentence">例句:</label>
+                        <textarea name="sentence" id="sentence"></textarea>
+                    </div>
+                </div>
+                <button onclick="saveWord()">OK</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

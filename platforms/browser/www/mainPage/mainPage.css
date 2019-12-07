@@ -1,0 +1,17 @@
+.rand-li {
+  padding: 0.5rem 2rem !important;
+}
+.rand-li .rand-word {
+  text-align: center;
+}
+
+.ui-icon-home::after{
+  background: url('../icons/home.png') no-repeat;
+  background-size: 1.5rem;
+  border-radius: 0;
+}
+.ui-icon-book::after{
+  background:url('../icons/book.png') no-repeat;
+  background-size: 1.5rem;
+  border-radius: 0;
+}
