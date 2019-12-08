@@ -1,1 +1,2 @@
-*.Java linguist-language=JqueryMobile
+*.java linguist-language=jquerymobile
+*.html linguist-language=jquerymobile
