@@ -1,6 +1,5 @@
 var localdb = DB.newDB();
-$(document).on("pagebeforecreate", function () {
-    console.log("all page");
+$(document).on("pagecreate", function () {
     new Promise(function (resolve, reject) {
         localdb.createDB('localEnglish', 'words', 'word');
         setTimeout(() => {

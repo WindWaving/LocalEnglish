@@ -1,4 +1,4 @@
-var localdb = DB.newDB();
+localdb = DB.newDB();
 $(document).on("pagebeforecreate", function () {
     new Promise(function (resolve, reject) {
         localdb.createDB('localEnglish', 'words', 'word');

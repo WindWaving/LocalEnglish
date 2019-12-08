@@ -4,6 +4,10 @@
 ul.wordlist li{
     border-bottom: 1px solid white;
 }
+ul.wordlist h2{
+    text-align: center;
+    color: #7e57c2;
+}
 #card{
     width: 15rem;
     height: 25rem;
