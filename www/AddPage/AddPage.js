@@ -1,4 +1,8 @@
+var localdb = DB.newDB();
+var dbname = "localEnglish";
+var store = "words";
 $(document).ready(function () {
+    localdb.createDB(dbname, store, "word");
     try{
         let urlpara=decodeURIComponent(location.search);
         console.log(urlpara);
@@ -12,18 +16,6 @@ $(document).ready(function () {
     }
    
 })
-function addSpeech() {
-    $(".group-form-speech").append($(".group-speech").clone(true));
-}
-function addSentence() {
-    $('.group-form-sentence').append($('.group-sentence').clone(true));
-}
-function deleteSpeech(that) {
-    $(that).parents('.group-speech').remove();
-}
-function deleteSentence(that) {
-    $(that).parents('.group-sentence').remove();
-}
 function getWords() {
     var dict = {};
     dict['word'] = $('input[name="word"]').val();
@@ -39,28 +31,13 @@ function getWords() {
     return null;
 }
 function saveWord() {
-    var localdb = DB.newDB();
-    var dbname = "localEnglish";
-    var store = "words";
     var res = getWords();
     if(res!=null){
         new Promise(function (resolve, reject) {
-            localdb.createDB(dbname, store, "word");
-            setTimeout(() => {
-                resolve();
-            }, 1000);
-        }).then(function () {
             localdb.addData(store, res);
-        }).then(function () {
-            location.href = "../AllPage/AllPage.html";
         }).catch(function (error) {
             console.log("error", error);
-        }).finally(function(){
-            setTimeout(() => {
-                localdb.closeDB();
-            }, 1000);
         })
-    
     }
   
 }
